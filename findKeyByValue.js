@@ -5,11 +5,11 @@ const assertEqual = (actual, expected) => {
 };
 
 const findKeyByValue = (object, value) => {
-  const list = Object.keys(object);
+  const item = Object.keys(object);
 
-  for (let item of list) {
-    if (object[item] === value) {
-      return item;
+  for (let key of item) {
+    if (object[key] === value) {
+      return key;
     }
   }
 };
