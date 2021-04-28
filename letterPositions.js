@@ -16,7 +16,7 @@ const assertArraysEqual = (arr1, arr2) => {
     : console.log(`😡😡😡 Assertion Failed: ${arr1} !== ${arr2}`);
 };
 
-const letterPositions = function (str) {
+const letterPositions = (str) => {
   const results = {};
   for (let i = 0; i < str.length; i++) {
     if (str[i] !== " ") {
