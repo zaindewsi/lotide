@@ -1,15 +1,19 @@
 const eqArrays = (arr1, arr2) => {
-  return arr1.length === arr2.length && arr1.every((item, i) => {
-    return item === arr2[i];
-  });
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
 };
- 
-const assertArraysEqual = (arr1, arr2) => {
- 
-  eqArrays(arr1, arr2) ?
-    console.log(`🐸🐸🐸 Assertion Passed: ${arr1} === ${arr2}`) :
-    console.log(`😡😡😡 Assertion Failed: ${arr1} !== ${arr2}`);
 
+const assertArraysEqual = (arr1, arr2) => {
+  eqArrays(arr1, arr2)
+    ? console.log(`🐸🐸🐸 Assertion Passed: ${arr1} === ${arr2}`)
+    : console.log(`😡😡😡 Assertion Failed: ${arr1} !== ${arr2}`);
 };
 
 const middle = (array) => {
@@ -19,7 +23,7 @@ const middle = (array) => {
   } else if (array.length % 2 !== 0) {
     newArray.push(array[Math.floor(array.length / 2)]);
   } else if (array.length % 2 === 0) {
-    newArray.push(array[(array.length / 2) - 1], array[array.length / 2]);
+    newArray.push(array[array.length / 2 - 1], array[array.length / 2]);
   }
   return newArray;
 };

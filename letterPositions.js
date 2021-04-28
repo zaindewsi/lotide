@@ -1,10 +1,13 @@
 const eqArrays = (arr1, arr2) => {
-  return (
-    arr1.length === arr2.length &&
-    arr1.every((item, i) => {
-      return item === arr2[i];
-    })
-  );
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
 };
 
 const assertArraysEqual = (arr1, arr2) => {
@@ -13,7 +16,7 @@ const assertArraysEqual = (arr1, arr2) => {
     : console.log(`😡😡😡 Assertion Failed: ${arr1} !== ${arr2}`);
 };
 
-const letterPositions = function(str) {
+const letterPositions = function (str) {
   const results = {};
   for (let i = 0; i < str.length; i++) {
     if (str[i] !== " ") {
