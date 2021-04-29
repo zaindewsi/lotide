@@ -21,7 +21,7 @@ const eqObjects = (obj1, obj2) => {
 const assertObjectsEqual = (actual, expected) => {
   // const inspect = require("util").inspect;
 
-  eqObjects(actual, expected)
+  actual === expected
     ? console.log(`🐸🐸🐸 Assertion Passed: ${actual} === ${expected}`)
     : console.log(`😡😡😡 Assertion Failed: ${actual} !== ${expected}`);
 };
