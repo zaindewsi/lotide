@@ -12,8 +12,8 @@ const eqArrays = (arr1, arr2) => {
 
 const assertArraysEqual = (arr1, arr2) => {
   eqArrays(arr1, arr2)
-    ? console.log(`🐸🐸🐸 Assertion Passed: ${arr1} === ${arr2}`)
-    : console.log(`😡😡😡 Assertion Failed: ${arr1} !== ${arr2}`);
+    ? console.log(`🐸 Assertion Passed: ${arr1} === ${arr2}`)
+    : console.log(`😡 Assertion Failed: ${arr1} !== ${arr2}`);
 };
 
 const middle = (array) => {
