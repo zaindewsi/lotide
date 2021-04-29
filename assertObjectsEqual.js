@@ -29,6 +29,11 @@ const assertObjectsEqual = (actual, expected) => {
         `😡😡😡 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`
       );
 };
-const ab = { a: "2", b: "2" };
+
+const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 assertObjectsEqual(ab, ba); // => true
+
+const cd = { a: "2", b: "2" };
+const dc = { b: "2", a: "1" };
+assertObjectsEqual(cd, dc); // => false
